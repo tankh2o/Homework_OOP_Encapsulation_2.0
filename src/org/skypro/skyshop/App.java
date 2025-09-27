@@ -2,11 +2,13 @@ package org.skypro.skyshop;
 
 public class App {
     public static void main(String[] args) {
-        Products num1 = new Products("banana", 50);
-        Products num2 = new Products("ban", 500);
-        Products num3 = new Products("la", 55);
-        Products num4 = new Products("caca", 15);
-        Products num5 = new Products("za", 100);
+        Products num1 = new SimpleProduct("Банан", 60);
+        Products num2 = new SimpleProduct("Персик", 90);
+        Products num3 = new FixPriceProduct("Киви");
+        Products num4 = new DiscountedProduct("Яблоко", 30, 15);
+        Products num5 = new DiscountedProduct("Ананас", 120, 20);
+
+
 
         ProductBasket basket = new ProductBasket();
         basket.add(num1);
@@ -17,11 +19,11 @@ public class App {
 
         basket.printTheContent();
 
-        System.out.println(basket.checkAvailability("caca"));
+        System.out.println(basket.checkAvailability("Банан"));
 
-        System.out.println(basket.checkAvailability("nana"));
+        System.out.println(basket.checkAvailability("Киви"));
 
-        System.out.println(basket.checkAvailability("abc"));
+        System.out.println(basket.checkAvailability("Виноград"));
 
         basket.cartClean();
 
