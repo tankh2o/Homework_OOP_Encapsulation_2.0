@@ -23,7 +23,7 @@ abstract class Products {
     }
 
     public boolean isSpecial() {
-        return true;
+        return false;
     }
 }
 

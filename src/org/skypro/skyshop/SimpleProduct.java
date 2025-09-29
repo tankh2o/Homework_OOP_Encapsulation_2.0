@@ -1,7 +1,7 @@
 package org.skypro.skyshop;
 
 class SimpleProduct extends Products {
-    double price;
+   private double price;
 
     public SimpleProduct(String name, double price) {
         super(name);
@@ -21,10 +21,5 @@ class SimpleProduct extends Products {
     public String toString() {
         return getName() +
                 ": " + getPrice();
-    }
-
-    @Override
-    public boolean isSpecial() {
-        return false;
     }
 }
